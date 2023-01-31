@@ -1,0 +1,47 @@
+//====================================================================================================
+.main {
+	background: url(../img/bg.jpg) center center/cover no-repeat;
+
+	&__container {}
+
+	&__row {
+		margin-left: 26%;
+		@include adaptiveValue("padding-top", 250, 30);
+		@include adaptiveValue("padding-bottom", 250, 30);
+
+		@media (max-width:$tablet) {
+			margin-left: 0;
+		}
+	}
+
+	&__box {
+		background: rgba(255, 255, 255, 0.65);
+		padding: 12px 40px;
+		max-width: 1030px;
+		margin-bottom: 23px;
+	}
+
+	&__box-title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 56, 40);
+		line-height: math.div(68, 56);
+		margin-bottom: 16px;
+	}
+
+	&__box-subtitle {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 24, 20);
+		line-height: math.div(29, 24);
+	}
+
+	&__btn {
+		margin-left: 80px;
+
+		@media (max-width:$tablet) {
+			margin-left: 0;
+		}
+	}
+}
+
+
+//====================================================================================================
