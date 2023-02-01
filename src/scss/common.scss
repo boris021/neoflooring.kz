@@ -14,3 +14,10 @@
 		background: #18a775;
 	}
 }
+
+.title {
+	font-weight: 800;
+	@include adaptiveValue("font-size", 48, 40);
+	line-height: math.div(59, 48);
+	margin-bottom: 20px;
+}
