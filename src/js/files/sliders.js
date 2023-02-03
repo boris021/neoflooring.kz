@@ -8,8 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper, {
-	Navigation,
-	Pagination
+	Navigation
 } from 'swiper';
 /*
 Основні модулі слайдера:
@@ -22,9 +21,9 @@ EffectFade, Lazy, Manipulation
 // Базові стилі
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
-import 'swiper/css';
+// import 'swiper/css';
 
 // Ініціалізація слайдерів
 function initSliders() {
@@ -35,17 +34,17 @@ function initSliders() {
 		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 2,
 			spaceBetween: 20,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
+			loop: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -58,13 +57,11 @@ function initSliders() {
 			},
 			*/
 
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-buttonway-prev',
+				nextEl: '.swiper-buttonway-next',
 			},
-			*/
 
 			// Скроллбар
 			/*
@@ -73,38 +70,28 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
-
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
 			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// Події
-			on: {
+						// Брейкпоінти
+						breakpoints: {
+							640: {
+								slidesPerView: 1,
+								spaceBetween: 0,
+								autoHeight: true,
+							},
+							768: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+							992: {
+								slidesPerView: 3,
+								spaceBetween: 20,
+							},
+							1268: {
+								slidesPerView: 4,
+								spaceBetween: 30,
+							},
+						},*/
 
-			}
 		});
 	}
 }

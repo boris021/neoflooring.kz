@@ -684,3 +684,44 @@
 		}
 	}
 }
+
+//========================================================================================================================================================
+
+
+.partner {
+
+	&__container {}
+
+	&__slider {
+		display: flex;
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__slide {
+		display: flex;
+	}
+
+	&__slide-img {}
+}
+
+.project {
+
+	&__box {}
+
+	&__title {}
+
+	&__subtitle {}
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
