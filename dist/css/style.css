@@ -1463,6 +1463,9 @@ body::after {
   display: -ms-flexbox;
   display: flex;
   margin-right: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project__gallery-img {
@@ -2180,7 +2183,27 @@ body::after {
   }
 
   .project__gallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .project__gallery img {
+    width: 45%;
+  }
+
+  .project__gallery {
     margin-bottom: 40px;
+  }
+
+  .project__gallery-img:not(:last-child) {
+    margin-right: 0;
   }
 
   .project__text:nth-of-type(1) {

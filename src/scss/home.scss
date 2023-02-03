@@ -622,6 +622,19 @@
 	&__gallery {
 		display: flex;
 		margin-right: 30px;
+		justify-content: center;
+
+		@media (max-width:$tablet) {
+			flex-wrap: wrap;
+			row-gap: 30px;
+			display: flex;
+			justify-content: space-between;
+
+			img {
+
+				width: 45%;
+			}
+		}
 
 		@media (max-width:$tablet) {
 			margin-bottom: 40px;
@@ -634,11 +647,17 @@
 
 		&:not(:last-child) {
 			margin-right: 30px;
+
+			@media (max-width:$tablet) {
+				margin-right: 0;
+			}
 		}
 
 		img {
 			width: 100%;
 		}
+
+
 	}
 
 	&__text {
