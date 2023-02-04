@@ -8,7 +8,8 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper, {
-	Navigation
+	Navigation,
+	Pagination
 } from 'swiper';
 /*
 Основні модулі слайдера:
@@ -34,10 +35,10 @@ function initSliders() {
 		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 2,
+			slidesPerView: 5,
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 800,
@@ -48,49 +49,39 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-buttonway-prev',
-				nextEl: '.swiper-buttonway-next',
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next',
 			},
 
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
+
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 5,
+					spaceBetween: 30,
+				},
 			},
-			*/
-			/*
-						// Брейкпоінти
-						breakpoints: {
-							640: {
-								slidesPerView: 1,
-								spaceBetween: 0,
-								autoHeight: true,
-							},
-							768: {
-								slidesPerView: 2,
-								spaceBetween: 20,
-							},
-							992: {
-								slidesPerView: 3,
-								spaceBetween: 20,
-							},
-							1268: {
-								slidesPerView: 4,
-								spaceBetween: 30,
-							},
-						},*/
 
 		});
 	}
