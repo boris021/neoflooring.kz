@@ -1638,6 +1638,92 @@ body::after {
           align-items: center;
 }
 
+.map {
+  position: relative;
+  padding-top: 74px;
+  padding-bottom: 74px;
+  height: 500px;
+}
+
+.map__container {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map__row {
+  position: relative;
+  padding: 24px 70px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  max-width: 481px;
+  height: 286px;
+}
+
+.map__adress {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.map__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.map__phone img {
+  margin-right: 5px;
+}
+
+.map__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.map__email img {
+  margin-right: 5px;
+}
+
+.map__social a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.map__social a img {
+  max-width: 54px;
+}
+
+.map__bg {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -3182,6 +3268,14 @@ button.swiper-pagination-bullet {
   .form__btn {
     max-height: 50px;
     padding: 18px 80px;
+  }
+
+  .map {
+    padding: 50px 0 30px 0;
+  }
+
+  .map__social a img {
+    width: 30px;
   }
 }
 
